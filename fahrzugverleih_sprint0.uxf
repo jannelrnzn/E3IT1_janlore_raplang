@@ -26,8 +26,9 @@
     <panel_attributes>Mietvertrag
 --
 + vertragsnummer: int
-+ mietbeginn: str
-+ mietende: str
++ mietdauer: int
++ mietbeginn: str = ""
++ mietende: str = ""
 --
 + mietpreis(): float
 + beenden()</panel_attributes>
@@ -102,7 +103,7 @@ r2=+fahrzeug</panel_attributes>
       <w>45</w>
       <h>25</h>
     </coordinates>
-    <panel_attributes>1</panel_attributes>
+    <panel_attributes>0..*</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -113,7 +114,7 @@ r2=+fahrzeug</panel_attributes>
       <w>45</w>
       <h>25</h>
     </coordinates>
-    <panel_attributes>0..*</panel_attributes>
+    <panel_attributes>1</panel_attributes>
     <additional_attributes/>
   </element>
 </diagram>
