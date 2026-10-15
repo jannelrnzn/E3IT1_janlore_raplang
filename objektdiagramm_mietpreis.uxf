@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>50</x>
+      <y>135</y>
+      <w>300</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>__mina:Kunde__
+--
+name = "Mina Beispiel"
+kundennummer = 123</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>460</x>
+      <y>135</y>
+      <w>350</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>__vertrag1001:Mietvertrag__
+--
+vertragsnummer = 1001
+mietdauer = 3
+mietpreis() = 90.00</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>920</x>
+      <y>135</y>
+      <w>370</w>
+      <h>200</h>
+    </coordinates>
+    <panel_attributes>__auto:Fahrzeug__
+--
+kennzeichen = "AB-CD 123"
+grundpreis = 30.00
+verfuegbar = True</panel_attributes>
+    <additional_attributes />
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>340</x>
+      <y>225</y>
+      <w>130</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=kunde</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>800</x>
+      <y>225</y>
+      <w>130</w>
+      <h>20</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=fahrzeug</panel_attributes>
+    <additional_attributes>10.0;10.0;120.0;10.0</additional_attributes>
+  </element>
+</diagram>
