@@ -1,6 +1,6 @@
 class Fahrzeug:
 
-    def __init__(self, kennzeichen: str, grundpreis: float, verfuegbar: bool) -> None:
+    def __init__(self, kennzeichen: str, grundpreis: float, verfuegbar: bool = True) -> None:
         self.__kennzeichen=kennzeichen
         self.__grundpreis=grundpreis
         self.__verfuegbar=verfuegbar
