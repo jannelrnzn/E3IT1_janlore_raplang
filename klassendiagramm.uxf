@@ -14,6 +14,7 @@
 - name: str
 - kundennummer: int
 --
++ Kunde(name: str, kundennummer: int)
 + get_name(): str
 + get_kundennummer(): int</panel_attributes>
     <additional_attributes/>
@@ -33,6 +34,7 @@
 - mietbeginn: str = ""
 - mietende: str = ""
 --
++ Mietvertrag(vertragsnummer: int, kunde: Kunde, fahrzeug: Fahrzeug, mietdauer: int, mietbeginn: str = "", mietende: str="")
 + get_vertragsnummer(): int
 + get_kunde(): Kunde
 + get_fahrzeug(): Fahrzeug
@@ -56,6 +58,7 @@
 - grundpreis: float
 - verfuegbar: bool
 -- 
++ Fahrzeug(kennzeichen: str, grundpreis: float, verfuegbar: bool)
 + get_kennzeichen(): str
 + get_grundpreis(): float
 + ist_verfuegbar(): bool
