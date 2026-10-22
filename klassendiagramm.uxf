@@ -11,8 +11,11 @@
     </coordinates>
     <panel_attributes>Kunde
 --
-+ name: str
-+ kundennummer: int</panel_attributes>
+- name: str
+- kundennummer: int
+--
++ get_name(): str
++ get_kundennummer(): int</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -25,12 +28,17 @@
     </coordinates>
     <panel_attributes>Mietvertrag
 --
-+ vertragsnummer: int
-+ mietdauer: int
-+ mietbeginn: str = ""
-+ mietende: str = ""
+- vertragsnummer: int
+- mietdauer: int
+- mietbeginn: str = ""
+- mietende: str = ""
 --
++ get_vertragsnummer(): int
++ get_kunde(): Kunde
++ get_fahrzeug(): Fahrzeug
++ get_mietdauer(): int
 + mietpreis(): float
++ starten()
 + beenden()</panel_attributes>
     <additional_attributes/>
   </element>
@@ -44,9 +52,15 @@
     </coordinates>
     <panel_attributes>Fahrzeug
 --
-+ kennzeichen: str
-+ grundpreis: float
-+ verfuegbar: bool</panel_attributes>
+- kennzeichen: str
+- grundpreis: float
+- verfuegbar: bool
+-- 
++ get_kennzeichen(): str
++ get_grundpreis(): float
++ ist_verfuegbar(): bool
++ vermieten()
++ zurueckgeben()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -58,7 +72,7 @@
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=&lt;-
-r1=+kunde</panel_attributes>
+r1=-kunde</panel_attributes>
     <additional_attributes>10.0;10.0;120.0;180.0</additional_attributes>
   </element>
   <element>
@@ -70,7 +84,7 @@ r1=+kunde</panel_attributes>
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-r2=+fahrzeug</panel_attributes>
+r2=-fahrzeug</panel_attributes>
     <additional_attributes>10.0;180.0;180.0;10.0</additional_attributes>
   </element>
   <element>
