@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>430</x>
+      <y>40</y>
+      <w>240</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>_kunde : Kunde_
+--
+name = "Mina Beispiel"
+kundennummer = 123</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>100</x>
+      <y>230</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_mietvertrag_fahrrad : Mietvertrag_
+--
+vertragsnummer = 1001
+mietdauer = 3
+mietbeginn = ""
+mietende = ""</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>720</x>
+      <y>230</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_mietvertrag_e_bike : Mietvertrag_
+--
+vertragsnummer = 1002
+mietdauer = 3
+mietbeginn = ""
+mietende = ""</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>100</x>
+      <y>460</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_fahrrad : Fahrrad_
+--
+kennzeichen = "F-100"
+tagespreis = 15.00
+verfuegbar = True
+anzahl_gaenge = 21</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>720</x>
+      <y>460</y>
+      <w>280</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>_e_bike : E_Bike_
+--
+kennzeichen = "E-200"
+tagespreis = 30.00
+verfuegbar = True
+akkukapazitaet = 500</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>120</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=-kunde</panel_attributes>
+    <additional_attributes>10.0;110.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>600</x>
+      <y>120</y>
+      <w>270</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=-kunde</panel_attributes>
+    <additional_attributes>260.0;110.0;20.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>230</x>
+      <y>350</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=-fahrzeug</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>850</x>
+      <y>350</y>
+      <w>100</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+r2=-fahrzeug</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+</diagram>
