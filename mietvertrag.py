@@ -26,7 +26,7 @@ class Mietvertrag:
         return self.__mietdauer
      
     def mietpreis(self) -> float:
-        return self.__mietdauer * self.__fahrzeug.get_grundpreis()
+        return self.__mietdauer * self.__fahrzeug.get_tagespreis()
 
     def starten(self) -> None:
         self.__fahrzeug.vermieten()
