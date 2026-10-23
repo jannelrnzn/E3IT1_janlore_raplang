@@ -1,15 +1,15 @@
 class Fahrzeug:
 
-    def __init__(self, kennzeichen: str, grundpreis: float, verfuegbar: bool = True) -> None:
+    def __init__(self, kennzeichen: str, tagespreis: float, verfuegbar: bool = True) -> None:
         self.__kennzeichen=kennzeichen
-        self.__grundpreis=grundpreis
+        self.__tagespreis=tagespreis
         self.__verfuegbar=verfuegbar
 
     def get_kennzeichen(self) -> str:
         return self.__kennzeichen
 
-    def get_grundpreis(self) -> float:
-        return self.__grundpreis
+    def get_tagespreis(self) -> float:
+        return self.__tagespreis
 
     def ist_verfuegbar(self) -> bool:
         return self.__verfuegbar
