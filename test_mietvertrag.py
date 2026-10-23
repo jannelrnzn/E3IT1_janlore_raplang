@@ -2,7 +2,7 @@ from kunde import Kunde
 from fahrzeug import Fahrzeug
 from mietvertrag import Mietvertrag
 from fahrrad import Fahrrad
-from e_bike import E-Bike
+from e_bike import E_Bike
 
 import pytest
 import sys
