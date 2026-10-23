@@ -6,12 +6,12 @@ from datetime import date
 
 class Mietvertrag:
     def __init__(self, vertragsnummer: int, kunde: Kunde, fahrzeug: Fahrzeug, mietdauer: int, mietbeginn: str = "", mietende: str = "") -> None:
-        self.vertragsnummer = vertragsnummer
-        self.kunde = kunde
-        self.fahrzeug = fahrzeug
-        self.mietdauer = mietdauer  
-        self.mietbeginn = mietbeginn    # erstmal optional
-        self.mietende = mietende        # erstmal optional
+        self.__vertragsnummer = vertragsnummer
+        self.__kunde = kunde
+        self.__fahrzeug = fahrzeug
+        self.__mietdauer = mietdauer  
+        self.__mietbeginn = mietbeginn    # erstmal optional
+        self.__mietende = mietende        # erstmal optional
 
     def get_vertragsnummer(self) -> int:
         return self.__vertragsnummer
@@ -26,7 +26,7 @@ class Mietvertrag:
         return self.__mietdauer
      
     def mietpreis(self) -> float:
-        return self.mietdauer * self.fahrzeug.get_grundpreis()
+        return self.__mietdauer * self.__fahrzeug.get_grundpreis()
 
     def starten(self) -> None:
         self.__fahrzeug.vermieten()
