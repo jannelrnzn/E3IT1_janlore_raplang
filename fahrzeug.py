@@ -1,9 +1,11 @@
-class Fahrzeug:
+from abc import ABC, abstractmethod
+
+class Fahrzeug(ABC):
 
     def __init__(self, kennzeichen: str, tagespreis: float, verfuegbar: bool = True) -> None:
-        self.__kennzeichen=kennzeichen
-        self.__tagespreis=tagespreis
-        self.__verfuegbar=verfuegbar
+        self.__kennzeichen = kennzeichen
+        self.__tagespreis = tagespreis
+        self.__verfuegbar = verfuegbar
 
     def get_kennzeichen(self) -> str:
         return self.__kennzeichen
@@ -20,4 +22,6 @@ class Fahrzeug:
     def zurueckgeben(self) -> None:
         self.__verfuegbar = True
 
-
+    @abstractmethod
+    def mietpreis(self, mietdauer: int) -> float:
+        pass
