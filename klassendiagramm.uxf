@@ -26,7 +26,7 @@
       <x>390</x>
       <y>250</y>
       <w>280</w>
-      <h>380</h>
+      <h>420</h>
     </coordinates>
     <panel_attributes>Mietvertrag
 --
@@ -43,9 +43,11 @@
      mietende: str = "")
 + get_vertragsnummer(): int
 + get_kunde(): Kunde
-+ get_fahrzeug(): Fahrzeug
++ get_fahrzeuge(): list
 + get_mietdauer(): int
-+ mietpreis(): float
++ hinzufuegen_fahrzeug(
+     fahrzeug: Fahrzeug)
++ gesamtpreis(): float
 + starten()
 + beenden()</panel_attributes>
     <additional_attributes/>
@@ -56,9 +58,9 @@
       <x>840</x>
       <y>80</y>
       <w>240</w>
-      <h>280</h>
+      <h>300</h>
     </coordinates>
-    <panel_attributes>Fahrzeug
+    <panel_attributes>/Fahrzeug/
 --
 - kennzeichen: str
 - tagespreis: float
@@ -71,7 +73,8 @@
 + get_tagespreis(): float
 + ist_verfuegbar(): bool
 + vermieten()
-+ zurueckgeben()</panel_attributes>
++ zurueckgeben()
+/+ mietpreis(mietdauer: int): float/</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -95,7 +98,7 @@ r1=-kunde</panel_attributes>
       <h>200</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-r2=-fahrzeug</panel_attributes>
+r2=-fahrzeuge</panel_attributes>
     <additional_attributes>10.0;180.0;180.0;10.0</additional_attributes>
   </element>
   <element>
@@ -139,16 +142,16 @@ r2=-fahrzeug</panel_attributes>
       <w>45</w>
       <h>25</h>
     </coordinates>
-    <panel_attributes>1</panel_attributes>
+    <panel_attributes>1..*</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>720</x>
-      <y>480</y>
-      <w>240</w>
-      <h>170</h>
+      <y>500</y>
+      <w>260</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>Fahrrad
 --
@@ -158,16 +161,17 @@ r2=-fahrzeug</panel_attributes>
      tagespreis: float,
      verfuegbar: bool,
      anzahl_gaenge: int)
-+ get_anzahl_gaenge(): int</panel_attributes>
++ get_anzahl_gaenge(): int
++ mietpreis(mietdauer: int): float</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
       <x>1000</x>
-      <y>480</y>
-      <w>240</w>
-      <h>170</h>
+      <y>500</y>
+      <w>260</w>
+      <h>190</h>
     </coordinates>
     <panel_attributes>E_Bike
 --
@@ -177,14 +181,15 @@ r2=-fahrzeug</panel_attributes>
      tagespreis: float,
      verfuegbar: bool,
      akkukapazitaet: int)
-+ get_akkukapazitaet(): int</panel_attributes>
++ get_akkukapazitaet(): int
++ mietpreis(mietdauer: int): float</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>830</x>
-      <y>350</y>
+      <y>370</y>
       <w>100</w>
       <h>150</h>
     </coordinates>
@@ -195,7 +200,7 @@ r2=-fahrzeug</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1010</x>
-      <y>350</y>
+      <y>370</y>
       <w>130</w>
       <h>150</h>
     </coordinates>
