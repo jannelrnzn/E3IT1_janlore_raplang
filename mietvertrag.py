@@ -6,6 +6,8 @@ class Mietvertrag:
 
     def __init__(self, vertragsnummer: int, kunde: Kunde, fahrzeug: Fahrzeug,
                  mietdauer: int, mietbeginn: str = "", mietende: str = "") -> None:
+        if mietdauer <= 0:
+            raise ValueError("Die Mietdauer muss größer als 0 sein.")
         self.__vertragsnummer = vertragsnummer
         self.__kunde = kunde
         self.__fahrzeuge = [fahrzeug]
