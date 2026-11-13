@@ -34,8 +34,8 @@ mietende = ""</panel_attributes>
   <element>
     <id>UMLGeneric</id>
     <coordinates>
-      <x>200</x>
-      <y>330</y>
+      <x>390</x>
+      <y>300</y>
       <w>260</w>
       <h>130</h>
     </coordinates>
@@ -43,24 +43,8 @@ mietende = ""</panel_attributes>
 --
 kennzeichen = "F-100"
 tagespreis = 15.00
-verfuegbar = True
+verfuegbar = False
 anzahl_gaenge = 21</panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLGeneric</id>
-    <coordinates>
-      <x>580</x>
-      <y>330</y>
-      <w>260</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>_e_bike : E_Bike_
---
-kennzeichen = "E-200"
-tagespreis = 30.00
-verfuegbar = True
-akkukapazitaet = 500</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -78,25 +62,13 @@ r2=-kunde</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>320</x>
+      <x>510</x>
       <y>180</y>
-      <w>180</w>
-      <h>170</h>
+      <w>110</w>
+      <h>140</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
 r2=-fahrzeuge</panel_attributes>
-    <additional_attributes>160.0;10.0;10.0;150.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>550</x>
-      <y>180</y>
-      <w>180</w>
-      <h>170</h>
-    </coordinates>
-    <panel_attributes>lt=-&gt;
-r2=-fahrzeuge</panel_attributes>
-    <additional_attributes>10.0;10.0;160.0;150.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
   </element>
 </diagram>
