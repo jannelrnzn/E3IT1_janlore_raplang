@@ -1,4 +1,7 @@
+import pytest
+
 from kunde import Kunde
+from fahrzeug import Fahrzeug
 from mietvertrag import Mietvertrag
 from fahrrad import Fahrrad
 from e_bike import E_Bike
@@ -105,3 +108,42 @@ class TestMietpreis:
         mietvertrag.beenden()
         assert fahrrad.ist_verfuegbar() is True
         assert e_bike.ist_verfuegbar() is True
+
+    def test_negativer_tagespreis_wird_abgelehnt(self):
+        with pytest.raises(ValueError):
+            Fahrrad("F-100", -1.00, True, 21)
+
+    def test_mietdauer_muss_groesser_null_sein(self):
+        kunde = Kunde("Mina Beispiel", 123)
+        fahrrad = Fahrrad("F-100", 15.00, True, 21)
+
+        with pytest.raises(ValueError):
+            Mietvertrag(1001, kunde, fahrrad, 0)
+
+    def test_nicht_verfuegbares_fahrzeug_kann_nicht_gemietet_werden(self):
+        kunde = Kunde("Mina Beispiel", 123)
+        fahrrad = Fahrrad("F-100", 15.00, False, 21)
+        mietvertrag = Mietvertrag(1001, kunde, fahrrad, 3)
+
+        with pytest.raises(RuntimeError):
+            mietvertrag.starten()
+
+    def test_abstrakte_fahrzeugklasse_kann_nicht_erzeugt_werden(self):
+        with pytest.raises(TypeError):
+            Fahrzeug()
+
+    def test_fahrzeug_kann_nicht_doppelt_vermietet_werden(self):
+        kunde = Kunde("Raphail Langer", 456)
+        e_bike = E_Bike("E-500", 20.00, True, 400)
+
+        mietvertrag_1 = Mietvertrag(1005, kunde, e_bike, 2)
+        mietvertrag_2 = Mietvertrag(1006, kunde, e_bike, 3)
+
+        mietvertrag_1.starten()
+
+        with pytest.raises(RuntimeError):
+            mietvertrag_2.starten()
+
+        mietvertrag_1.beenden()
+        mietvertrag_2.starten()
+        assert e_bike.ist_verfuegbar() is False
